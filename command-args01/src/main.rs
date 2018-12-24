@@ -31,5 +31,5 @@ fn main() {
     for m in &numbers[1..] {
         d = gcd(d, *m)
     }
-    println!("{}", d);
+    println!("The gratest common driver of {:?} is {}", numbers, d);
 }
