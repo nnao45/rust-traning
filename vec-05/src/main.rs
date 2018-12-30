@@ -12,4 +12,6 @@ fn main() {
     println!("{:?}", v);
     v.pop();
     println!("{:?}", v);
+    v.pop();
+    println!("{:?}", v);
 }
