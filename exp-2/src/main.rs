@@ -4,8 +4,10 @@ struct Point {
 }
 
 fn main() {
-    let p = Some(Point {x: 0, y: 0 });
-    m(&p)
+    let p1 = Some(Point {x: 0, y: 0 });
+    m(&p1);
+    let p2 = None;
+    m(&p2);
 }
 
 fn m(p: &Option<Point>) {
