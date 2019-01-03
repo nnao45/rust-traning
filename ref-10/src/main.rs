@@ -1,5 +1,5 @@
-struct S<'a> {
-    r: &'a i32
+struct S<'abema> { // 生存期間の定義で使う英字は任意
+    r: &'abema i32
 }
 
 fn main() {
