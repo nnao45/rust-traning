@@ -12,8 +12,12 @@ struct Payment {
 }
 
 fn main() {
+    let mut builder = my::OptsBuilder::new();
+        builder.ip_or_hostname(Some("root"))
+               .db_name(Some("test"))
+               .pass(Some("my-pw"));
     // See docs on the `OptsBuilder`'s methods for the list of options available via URL.
-    let pool = my::Pool::new("mysql://root:my-pw@localhost:3306/test").unwrap();
+    let pool = my::Pool::new(builder).unwrap();
 
     // Let's create payment table.
     // Unwrap just to make sure no error happened.
